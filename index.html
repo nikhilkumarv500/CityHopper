@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.0.2/dist/vis-network.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5548f5ed00.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://hammerjs.github.io/dist/hammer.min.js"></script> -->
+
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      #cityContainer {
+        height: 400px;
+        width: 200px;
+        margin-left: 300px;
+        border: 1px solid black;
+      }
+
+      #container,
+      #path-container {
+        margin-bottom: 20px;
+      }
+
+      #from-city {
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+      #to-city {
+        margin-top: 10px;
+        margin-left: -170px;
+      }
+
+      #generate-graph {
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+      #find-path {
+        margin-top: 10px;
+        margin-left: -170px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="jumbotron">
+      <h1 class="display-6">VIS.js</h1>
+    </div> -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="container"></div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="path-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div id="cityContainer"></div>
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <input type="text" id="from-city" placeholder="Enter from city id number" />
+            </div>
+
+            <div class="col">
+              <input type="text" id="to-city" placeholder="Enter dest city id number" />
+            </div>
+          </div>
+
+          <div class="row"><br /></div>
+
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-danger" id="generate-graph">
+                Get New Graph
+              </button>
+            </div>
+
+            <div class="col">
+              <button type="button" class="btn btn-primary" id="find-path">
+                Find Shortest Path
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
